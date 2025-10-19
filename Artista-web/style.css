@@ -1,0 +1,184 @@
+/* ESTILO GENERAL */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #000;
+  color: #fff;
+  scroll-behavior: smooth;
+}
+
+h1, h2, h3 {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+a { color: #ff0050; text-decoration: none; }
+
+.section {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.section.dark {
+  background-color: #111;
+}
+
+.btn {
+  background: #ff0050;
+  color: white;
+  padding: 12px 30px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #ff3366;
+}
+
+/* HERO */
+.hero {
+  position: relative;
+  background: url('fondo.jpg') center/cover no-repeat;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+}
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+.hero h1 {
+  font-size: 3rem;
+  margin: 0;
+}
+.hero p {
+  margin: 10px 0 20px;
+  font-size: 1.3rem;
+}
+
+/* BIO */
+.bio-content {
+  max-width: 900px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+.artist-photo {
+  width: 200px;
+  border-radius: 100%;
+  border: 3px solid #ff0050;
+}
+
+/* LANZAMIENTOS */
+.releases {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+.release-card {
+  background-color: #222;
+  padding: 20px;
+  border-radius: 20px;
+  width: 280px;
+}
+.release-card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* VIDEOS */
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+.video-grid iframe {
+  width: 100%;
+  height: 250px;
+  border-radius: 15px;
+}
+
+/* GALERÍA */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 10px;
+}
+.gallery img {
+  width: 100%;
+  border-radius: 10px;
+  transition: transform 0.3s;
+}
+.gallery img:hover {
+  transform: scale(1.05);
+}
+
+/* EVENTOS */
+.event-list {
+  list-style: none;
+  padding: 0;
+  max-width: 500px;
+  margin: auto;
+  font-size: 1.1rem;
+}
+.event-list li {
+  margin: 12px 0;
+}
+
+/* CONTACTO */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 400px;
+  margin: 20px auto;
+}
+.contact-form input,
+.contact-form textarea {
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  font-family: inherit;
+}
+.contact-form textarea {
+  resize: vertical;
+  height: 100px;
+}
+.social-links a {
+  margin: 0 10px;
+  font-weight: bold;
+}
+.social-links a:hover {
+  text-decoration: underline;
+}
+
+/* FOOTER */
+footer {
+  background-color: #000;
+  text-align: center;
+  padding: 30px 10px;
+  font-size: 0.9rem;
+  color: #888;
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+  .bio-content {
+    flex-direction: column;
+  }
+}
